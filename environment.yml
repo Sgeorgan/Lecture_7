@@ -1,12 +1,15 @@
-name: example-environment
+# Software environment for GMGN06 Programming in Geomatics I
+# Create it with:   conda env create -f environment.yml
+# Then start JupyterLab with:   conda activate gmgn06   and   jupyter lab
+# All course notebooks were tested on 10 October 2026 with pandas 2.2.3 and pandas 3.0.5.
+# conda-forge is community-run and free to use; it also has the geospatial packages
+# (geopandas, rasterio, cartopy) that later courses need.
+name: gmgn06
 channels:
   - conda-forge
 dependencies:
-  - python
-  - numpy
-  - pip
-  - pip:
-    - nbgitpuller
-    - sphinx-gallery
-    - pandas
-    - matplotlib
+  - python=3.12
+  - jupyterlab
+  - pandas>=2.2
+  - numpy>=2.0
+  - matplotlib>=3.9
